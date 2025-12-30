@@ -13,9 +13,9 @@
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="SC TimeLine"/>
   <Description DefaultValue="Sync Outlook appointments to Timeline via Databridge Pro"/>
-  <IconUrl DefaultValue="https://github.com/pamodeo/sc-timeline-addin/tree/main/assets/icon-32.png"/>
-  <HighResolutionIconUrl DefaultValue="https://github.com/pamodeo/sc-timeline-addin/tree/main/assets/icon-80.png"/>
-  <SupportUrl DefaultValue="https://github.com/pamodeo/sc-timeline-addin/tree/main/support"/>
+  <IconUrl DefaultValue="https://raw.githubusercontent.com/pamodeo/sc-timeline-addin/main/assets/icon-32.png"/>
+  <HighResolutionIconUrl DefaultValue="https://raw.githubusercontent.com/pamodeo/sc-timeline-addin/main/assets/icon-80.png"/>
+  <SupportUrl DefaultValue="https://raw.githubusercontent.com/pamodeo/sc-timeline-addin/main/support"/>
 
   <!-- Hosts -->
   <Hosts>
@@ -33,7 +33,7 @@
   <FormSettings>
     <Form xsi:type="ItemRead">
       <DesktopSettings>
-        <SourceLocation DefaultValue="https://github.com/pamodeo/sc-timeline-addin/tree/main/index.html"/>
+        <SourceLocation DefaultValue="https://raw.githubusercontent.com/pamodeo/sc-timeline-addin/main/index.html"/>
         <RequestedHeight>450</RequestedHeight>
       </DesktopSettings>
     </Form>
@@ -119,13 +119,13 @@
       <!-- Resources -->
       <Resources>
         <bt:Images>
-          <bt:Image id="Icon.16x16" DefaultValue="https://github.com/pamodeo/sc-timeline-addin/tree/main/assets/icon-16.png"/>
-          <bt:Image id="Icon.32x32" DefaultValue="https://github.com/pamodeo/sc-timeline-addin/tree/main/assets/icon-32.png"/>
-          <bt:Image id="Icon.80x80" DefaultValue="https://github.com/pamodeo/sc-timeline-addin/tree/main/assets/icon-80.png"/>
+          <bt:Image id="Icon.16x16" DefaultValue="https://raw.githubusercontent.com/pamodeo/sc-timeline-addin/main/main/assets/icon-16.png"/>
+          <bt:Image id="Icon.32x32" DefaultValue="https://raw.githubusercontent.com/pamodeo/sc-timeline-addin/main/assets/icon-32.png"/>
+          <bt:Image id="Icon.80x80" DefaultValue="https://raw.githubusercontent.com/pamodeo/sc-timeline-addin/main/assets/icon-80.png"/>
         </bt:Images>
         <bt:Urls>
-          <bt:Url id="Commands.Url" DefaultValue="https://github.com/pamodeo/sc-timeline-addin/tree/main/commands.html"/>
-          <bt:Url id="Taskpane.Url" DefaultValue="https://github.com/pamodeo/sc-timeline-addin/tree/main/index.html"/>
+          <bt:Url id="Commands.Url" DefaultValue="https://raw.githubusercontent.com/pamodeo/sc-timeline-addin/main/commands.html"/>
+          <bt:Url id="Taskpane.Url" DefaultValue="https://raw.githubusercontent.com/pamodeo/sc-timeline-addin/main/index.html"/>
         </bt:Urls>
         <bt:ShortStrings>
           <bt:String id="GroupLabel" DefaultValue="SC TimeLine"/>

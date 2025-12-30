@@ -6,137 +6,119 @@
   xmlns:mailappor="http://schemas.microsoft.com/office/mailappversionoverrides/1.0"
   xsi:type="MailApp">
 
-  <!-- Basic Settings -->
   <Id>7a683a99-9c78-4962-bcdb-84b9e08bfd12</Id>
   <Version>1.0.0.0</Version>
   <ProviderName>Octave</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="SC TimeLine"/>
   <Description DefaultValue="Sync Outlook appointments to Timeline via Databridge Pro"/>
-  <IconUrl DefaultValue="https://raw.githubusercontent.com/pamodeo/sc-timeline-addin/main/assets/icon-32.png"/>
-  <HighResolutionIconUrl DefaultValue="https://raw.githubusercontent.com/pamodeo/sc-timeline-addin/main/assets/icon-80.png"/>
-  <SupportUrl DefaultValue="https://raw.githubusercontent.com/pamodeo/sc-timeline-addin/main/support"/>
+  
+  <IconUrl DefaultValue="https://pamodeo.github.io/sc-timeline-addin/assets/icon-32.png"/>
+  <HighResolutionIconUrl DefaultValue="https://pamodeo.github.io/sc-timeline-addin/assets/icon-80.png"/>
 
-  <!-- Hosts -->
   <Hosts>
     <Host Name="Mailbox"/>
   </Hosts>
 
-  <!-- Requirements -->
   <Requirements>
     <Sets>
       <Set Name="Mailbox" MinVersion="1.5"/>
     </Sets>
   </Requirements>
 
-  <!-- Form Settings -->
   <FormSettings>
     <Form xsi:type="ItemRead">
       <DesktopSettings>
-        <SourceLocation DefaultValue="https://raw.githubusercontent.com/pamodeo/sc-timeline-addin/main/index.html"/>
+        <SourceLocation DefaultValue="https://pamodeo.github.io/sc-timeline-addin/index.html"/>
         <RequestedHeight>450</RequestedHeight>
       </DesktopSettings>
     </Form>
   </FormSettings>
 
-  <!-- Permissions -->
   <Permissions>ReadWriteItem</Permissions>
 
-  <!-- Rules -->
   <Rule xsi:type="RuleCollection" Mode="Or">
     <Rule xsi:type="ItemIs" ItemType="Appointment" FormType="Read"/>
     <Rule xsi:type="ItemIs" ItemType="Appointment" FormType="Edit"/>
   </Rule>
 
-  <!-- Version Overrides -->
   <VersionOverrides xmlns="http://schemas.microsoft.com/office/mailappversionoverrides" xsi:type="VersionOverridesV1_0">
     <VersionOverrides xmlns="http://schemas.microsoft.com/office/mailappversionoverrides/1.1" xsi:type="VersionOverridesV1_1">
-
       <Requirements>
         <bt:Sets DefaultMinVersion="1.5">
           <bt:Set Name="Mailbox"/>
         </bt:Sets>
       </Requirements>
-
       <Hosts>
         <Host xsi:type="MailHost">
-
-          <!-- Appointment Read Mode -->
           <DesktopFormFactor>
-            <FunctionFile resid="Commands.Url"/>
+            <FunctionFile resid="Cmd.Url"/>
 
             <ExtensionPoint xsi:type="AppointmentOrganizerCommandSurface">
               <OfficeTab id="TabDefault">
-                <Group id="msgReadGroup">
-                  <Label resid="GroupLabel"/>
-                  <Control xsi:type="Button" id="msgReadOpenPaneButton">
-                    <Label resid="TaskpaneButton.Label"/>
+                <Group id="scGroup1"> <Label resid="GpLabel"/>
+                  <Control xsi:type="Button" id="btnSync1">
+                    <Label resid="Btn.Label"/>
                     <Supertip>
-                      <Title resid="TaskpaneButton.Label"/>
-                      <Description resid="TaskpaneButton.Tooltip"/>
+                      <Title resid="Btn.Label"/>
+                      <Description resid="Btn.Tip"/>
                     </Supertip>
                     <Icon>
-                      <bt:Image size="16" resid="Icon.16x16"/>
-                      <bt:Image size="32" resid="Icon.32x32"/>
-                      <bt:Image size="80" resid="Icon.80x80"/>
+                      <bt:Image size="16" resid="Icon.16"/>
+                      <bt:Image size="32" resid="Icon.32"/>
+                      <bt:Image size="80" resid="Icon.80"/>
                     </Icon>
                     <Action xsi:type="ShowTaskpane">
-                      <SourceLocation resid="Taskpane.Url"/>
+                      <SourceLocation resid="Tp.Url"/>
                     </Action>
                   </Control>
                 </Group>
               </OfficeTab>
             </ExtensionPoint>
 
-            <!-- Appointment Attendee -->
             <ExtensionPoint xsi:type="AppointmentAttendeeCommandSurface">
               <OfficeTab id="TabDefault">
-                <Group id="msgReadGroup">
-                  <Label resid="GroupLabel"/>
-                  <Control xsi:type="Button" id="msgReadOpenPaneButton2">
-                    <Label resid="TaskpaneButton.Label"/>
+                <Group id="scGroup2"> <Label resid="GpLabel"/>
+                  <Control xsi:type="Button" id="btnSync2">
+                    <Label resid="Btn.Label"/>
                     <Supertip>
-                      <Title resid="TaskpaneButton.Label"/>
-                      <Description resid="TaskpaneButton.Tooltip"/>
+                      <Title resid="Btn.Label"/>
+                      <Description resid="Btn.Tip"/>
                     </Supertip>
                     <Icon>
-                      <bt:Image size="16" resid="Icon.16x16"/>
-                      <bt:Image size="32" resid="Icon.32x32"/>
-                      <bt:Image size="80" resid="Icon.80x80"/>
+                      <bt:Image size="16" resid="Icon.16"/>
+                      <bt:Image size="32" resid="Icon.32"/>
+                      <bt:Image size="80" resid="Icon.80"/>
                     </Icon>
                     <Action xsi:type="ShowTaskpane">
-                      <SourceLocation resid="Taskpane.Url"/>
+                      <SourceLocation resid="Tp.Url"/>
                     </Action>
                   </Control>
                 </Group>
               </OfficeTab>
             </ExtensionPoint>
-
           </DesktopFormFactor>
         </Host>
       </Hosts>
 
-      <!-- Resources -->
       <Resources>
         <bt:Images>
-          <bt:Image id="Icon.16x16" DefaultValue="https://raw.githubusercontent.com/pamodeo/sc-timeline-addin/main/main/assets/icon-16.png"/>
-          <bt:Image id="Icon.32x32" DefaultValue="https://raw.githubusercontent.com/pamodeo/sc-timeline-addin/main/assets/icon-32.png"/>
-          <bt:Image id="Icon.80x80" DefaultValue="https://raw.githubusercontent.com/pamodeo/sc-timeline-addin/main/assets/icon-80.png"/>
+          <bt:Image id="Icon.16" DefaultValue="https://pamodeo.github.io/sc-timeline-addin/assets/icon-16.png"/>
+          <bt:Image id="Icon.32" DefaultValue="https://pamodeo.github.io/sc-timeline-addin/assets/icon-32.png"/>
+          <bt:Image id="Icon.80" DefaultValue="https://pamodeo.github.io/sc-timeline-addin/assets/icon-80.png"/>
         </bt:Images>
         <bt:Urls>
-          <bt:Url id="Commands.Url" DefaultValue="https://raw.githubusercontent.com/pamodeo/sc-timeline-addin/main/commands.html"/>
-          <bt:Url id="Taskpane.Url" DefaultValue="https://raw.githubusercontent.com/pamodeo/sc-timeline-addin/main/index.html"/>
+          <bt:Url id="Cmd.Url" DefaultValue="https://pamodeo.github.io/sc-timeline-addin/commands.html"/>
+          <bt:Url id="Tp.Url" DefaultValue="https://pamodeo.github.io/sc-timeline-addin/index.html"/>
         </bt:Urls>
         <bt:ShortStrings>
-          <bt:String id="GroupLabel" DefaultValue="SC TimeLine"/>
-          <bt:String id="TaskpaneButton.Label" DefaultValue="Sync to Timeline"/>
+          <bt:String id="GpLabel" DefaultValue="SC TimeLine"/>
+          <bt:String id="Btn.Label" DefaultValue="Sync to Timeline"/>
         </bt:ShortStrings>
         <bt:LongStrings>
-          <bt:String id="TaskpaneButton.Tooltip" DefaultValue="Open SC TimeLine sync panel"/>
+          <bt:String id="Btn.Tip" DefaultValue="Open SC TimeLine sync panel"/>
         </bt:LongStrings>
       </Resources>
-
     </VersionOverrides>
   </VersionOverrides>
-
 </OfficeApp>
